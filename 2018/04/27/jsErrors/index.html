@@ -97,7 +97,7 @@
 <meta property="og:description" content="js的各种错误类型1 syntaxError  语法错误解析代码的时候发生错误123456    arr&amp;#123;&amp;#125;//VM208:1 Uncaught SyntaxError: Unexpected token &amp;#123;    arr = [1,&amp;amp;&amp;amp;]    //VM237:1 Uncaught SyntaxError: Unexpected token &amp;amp">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="blog.xfysj.cn/2018/04/27/images/referenceError.png">
-<meta property="og:updated_time" content="2018-04-27T00:39:49.935Z">
+<meta property="og:updated_time" content="2018-04-27T00:45:36.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js的各种错误类型">
 <meta name="twitter:description" content="js的各种错误类型1 syntaxError  语法错误解析代码的时候发生错误123456    arr&amp;#123;&amp;#125;//VM208:1 Uncaught SyntaxError: Unexpected token &amp;#123;    arr = [1,&amp;amp;&amp;amp;]    //VM237:1 Uncaught SyntaxError: Unexpected token &amp;amp">
@@ -394,17 +394,14 @@
       
 
       
-        <h1 id="js的各种错误类型"><a href="#js的各种错误类型" class="headerlink" title="js的各种错误类型"></a>js的各种错误类型</h1><p>1 syntaxError  语法错误<br>解析代码的时候发生错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    arr&#123;&#125;</span><br><span class="line"><span class="comment">//VM208:1 Uncaught SyntaxError: Unexpected token &#123;</span></span><br><span class="line"></span><br><span class="line">    arr = [<span class="number">1</span>,&amp;&amp;]</span><br><span class="line">    <span class="comment">//VM237:1 Uncaught SyntaxError: Unexpected token &amp;&amp;</span></span><br></pre></td></tr></table></figure></p>
-<p>2 referenceError 引用错误<br>引用一个不存在的变量错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a)</span><br><span class="line"><span class="comment">// VM116:1 Uncaught ReferenceError: a is not defined</span></span><br></pre></td></tr></table></figure></p>
+        <h1 id="js的各种错误类型"><a href="#js的各种错误类型" class="headerlink" title="js的各种错误类型"></a>js的各种错误类型</h1><h3 id="1-syntaxError-语法错误"><a href="#1-syntaxError-语法错误" class="headerlink" title="1 syntaxError  语法错误"></a>1 syntaxError  语法错误</h3><p>解析代码的时候发生错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    arr&#123;&#125;</span><br><span class="line"><span class="comment">//VM208:1 Uncaught SyntaxError: Unexpected token &#123;</span></span><br><span class="line"></span><br><span class="line">    arr = [<span class="number">1</span>,&amp;&amp;]</span><br><span class="line">    <span class="comment">//VM237:1 Uncaught SyntaxError: Unexpected token &amp;&amp;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="2-referenceError-引用错误"><a href="#2-referenceError-引用错误" class="headerlink" title="2 referenceError 引用错误"></a>2 referenceError 引用错误</h3><p>引用一个不存在的变量错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a)</span><br><span class="line"><span class="comment">// VM116:1 Uncaught ReferenceError: a is not defined</span></span><br></pre></td></tr></table></figure></p>
 <p><img src="../images/referenceError.png" alt="image"><br><a id="more"></a></p>
-<p>3 RangeError 范围错误<br>超出范围</p>
+<h3 id="3-RangeError-范围错误"><a href="#3-RangeError-范围错误" class="headerlink" title="3 RangeError 范围错误"></a>3 RangeError 范围错误</h3><p>超出范围</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>4 TypeError 类型错误</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">'a'</span>.rand()</span><br><span class="line"><span class="comment">//VM188:1 Uncaught TypeError: "a".rand is not a function</span></span><br></pre></td></tr></table></figure>
-<p>5 UrlError</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>6 evalError</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="4-TypeError-类型错误"><a href="#4-TypeError-类型错误" class="headerlink" title="4 TypeError 类型错误"></a>4 TypeError 类型错误</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">'a'</span>.rand()</span><br><span class="line"><span class="comment">//VM188:1 Uncaught TypeError: "a".rand is not a function</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-UrlError"><a href="#5-UrlError" class="headerlink" title="5 UrlError"></a>5 UrlError</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="6-evalError"><a href="#6-evalError" class="headerlink" title="6 evalError"></a>6 evalError</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -613,7 +610,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js的各种错误类型"><span class="nav-number">1.</span> <span class="nav-text">js的各种错误类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js的各种错误类型"><span class="nav-number">1.</span> <span class="nav-text">js的各种错误类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-syntaxError-语法错误"><span class="nav-number">1.0.1.</span> <span class="nav-text">1 syntaxError  语法错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-referenceError-引用错误"><span class="nav-number">1.0.2.</span> <span class="nav-text">2 referenceError 引用错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-RangeError-范围错误"><span class="nav-number">1.0.3.</span> <span class="nav-text">3 RangeError 范围错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-TypeError-类型错误"><span class="nav-number">1.0.4.</span> <span class="nav-text">4 TypeError 类型错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-UrlError"><span class="nav-number">1.0.5.</span> <span class="nav-text">5 UrlError</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-evalError"><span class="nav-number">1.0.6.</span> <span class="nav-text">6 evalError</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
