@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="修饰器dfsf 修饰器的参数  1 修饰器函数的第一个参数，就是所要修饰的目标类。  2n dfsdf 注意事项  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。  2 如果想添加实例属性，可以通过目标类的prototype对象操作。   12345678910111213141516171819// mixins.jsexport func">
+<meta name="description" content="修饰器dfsf 修饰器的参数  1 修饰器函数的第一个参数，就是所要修饰的目标类。  2n dfsdf 注意事项  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。  2 如果想添加实例属性，可以通过目标类的prototype对象操作。">
 <meta name="keywords" content="前端,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="修饰器">
 <meta property="og:url" content="blog.xfysj.cn/2018/04/27/Decorator/index.html">
 <meta property="og:site_name" content="小飞鱼设计">
-<meta property="og:description" content="修饰器dfsf 修饰器的参数  1 修饰器函数的第一个参数，就是所要修饰的目标类。  2n dfsdf 注意事项  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。  2 如果想添加实例属性，可以通过目标类的prototype对象操作。   12345678910111213141516171819// mixins.jsexport func">
+<meta property="og:description" content="修饰器dfsf 修饰器的参数  1 修饰器函数的第一个参数，就是所要修饰的目标类。  2n dfsdf 注意事项  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。  2 如果想添加实例属性，可以通过目标类的prototype对象操作。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-27T03:48:22.550Z">
+<meta property="og:updated_time" content="2018-04-28T01:24:47.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修饰器">
-<meta name="twitter:description" content="修饰器dfsf 修饰器的参数  1 修饰器函数的第一个参数，就是所要修饰的目标类。  2n dfsdf 注意事项  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。  2 如果想添加实例属性，可以通过目标类的prototype对象操作。   12345678910111213141516171819// mixins.jsexport func">
+<meta name="twitter:description" content="修饰器dfsf 修饰器的参数  1 修饰器函数的第一个参数，就是所要修饰的目标类。  2n dfsdf 注意事项  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。  2 如果想添加实例属性，可以通过目标类的prototype对象操作。">
 
 
 
@@ -395,7 +395,7 @@
       
         <h2 id="修饰器"><a href="#修饰器" class="headerlink" title="修饰器"></a>修饰器</h2><p>dfsf</p>
 <h3 id="修饰器的参数"><a href="#修饰器的参数" class="headerlink" title="修饰器的参数"></a>修饰器的参数</h3><p>  1 修饰器函数的第一个参数，就是所要修饰的目标类。<br>  2n dfsdf</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。<br>  2 如果想添加实例属性，可以通过目标类的prototype对象操作。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。<br>  2 如果想添加实例属性，可以通过目标类的prototype对象操作。<br><a id="more"></a></p>
   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mixins.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">mixins</span>(<span class="params">...list</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">target</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">Object</span>.assign(target.prototype, ...list)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; mixins &#125; <span class="keyword">from</span> <span class="string">'./mixins'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Foo = &#123;</span><br><span class="line">  foo() &#123; <span class="built_in">console</span>.log(<span class="string">'foo'</span>) &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">@mixins(Foo)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">obj.foo() <span class="comment">// 'foo'</span></span><br></pre></td></tr></table></figure>
 
       
