@@ -268,6 +268,182 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="blog.xfysj.cn/2018/04/27/Decorator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="姚运筹">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/favicon.ico">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小飞鱼设计">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/27/Decorator/" itemprop="url">修饰器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T11:09:43+08:00">
+                2018-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="修饰器"><a href="#修饰器" class="headerlink" title="修饰器"></a>修饰器</h2><p>dfsf</p>
+<h3 id="修饰器的参数"><a href="#修饰器的参数" class="headerlink" title="修饰器的参数"></a>修饰器的参数</h3><p>  1 修饰器函数的第一个参数，就是所要修饰的目标类。<br>  2n dfsdf</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>  1 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。<br>  2 如果想添加实例属性，可以通过目标类的prototype对象操作。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mixins.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">mixins</span>(<span class="params">...list</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">target</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">Object</span>.assign(target.prototype, ...list)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; mixins &#125; <span class="keyword">from</span> <span class="string">'./mixins'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Foo = &#123;</span><br><span class="line">  foo() &#123; <span class="built_in">console</span>.log(<span class="string">'foo'</span>) &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">@mixins(Foo)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = <span class="keyword">new</span> MyClass();</span><br><span class="line">obj.foo() <span class="comment">// 'foo'</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="blog.xfysj.cn/2018/04/27/jsErrors/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -391,7 +567,7 @@
 
       
         
-          <h1 id="js的各种错误类型"><a href="#js的各种错误类型" class="headerlink" title="js的各种错误类型"></a>js的各种错误类型</h1><h3 id="1-syntaxError-语法错误"><a href="#1-syntaxError-语法错误" class="headerlink" title="1 syntaxError  语法错误"></a>1 syntaxError  语法错误</h3><p>解析代码的时候发生错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    arr&#123;&#125;</span><br><span class="line"><span class="comment">//VM208:1 Uncaught SyntaxError: Unexpected token &#123;</span></span><br><span class="line"></span><br><span class="line">    arr = [<span class="number">1</span>,&amp;&amp;]</span><br><span class="line">    <span class="comment">//VM237:1 Uncaught SyntaxError: Unexpected token &amp;&amp;</span></span><br></pre></td></tr></table></figure></p>
+          <h2 id="js的各种错误类型"><a href="#js的各种错误类型" class="headerlink" title="js的各种错误类型"></a>js的各种错误类型</h2><h3 id="1-syntaxError-语法错误"><a href="#1-syntaxError-语法错误" class="headerlink" title="1 syntaxError  语法错误"></a>1 syntaxError  语法错误</h3><p>解析代码的时候发生错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    arr&#123;&#125;</span><br><span class="line"><span class="comment">//VM208:1 Uncaught SyntaxError: Unexpected token &#123;</span></span><br><span class="line"></span><br><span class="line">    arr = [<span class="number">1</span>,&amp;&amp;]</span><br><span class="line">    <span class="comment">//VM237:1 Uncaught SyntaxError: Unexpected token &amp;&amp;</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="2-referenceError-引用错误"><a href="#2-referenceError-引用错误" class="headerlink" title="2 referenceError 引用错误"></a>2 referenceError 引用错误</h3><p>引用一个不存在的变量错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a)</span><br><span class="line"><span class="comment">// VM116:1 Uncaught ReferenceError: a is not defined</span></span><br></pre></td></tr></table></figure></p>
 <p><img src="https://qqadapt.qpic.cn/txdocpic/0/27ce8a1e1bb27e6a54ebb841d7137d39/0" alt="image"><br>
           <!--noindex-->
@@ -661,7 +837,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
