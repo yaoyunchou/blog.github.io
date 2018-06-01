@@ -4,11 +4,55 @@
 
     
   <url>
-    <loc>blog.xfysj.cn/2018/05/31/css/juzhong/</loc>
-    <lastmod>2018-05-31T12:27:51.627Z</lastmod>
+    <loc>blog.xfysj.cn/2018/05/31/http/http-status/</loc>
+    <lastmod>2018-06-01T03:21:30.076Z</lastmod>
     <data>
         <display>
-        <title>c未知宽高如何 水平垂直居中</title>
+        <title>修饰器</title>
+        <pubTime>2018-05-31T07:38:09.226Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="blog.xfysj.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>blog.xfysj.cn/2018/06/01/mianshiti/vue20180601/</loc>
+    <lastmod>2018-06-01T03:19:00.396Z</lastmod>
+    <data>
+        <display>
+        <title>vue相关面试题</title>
+        <pubTime>2018-06-01T03:16:08.338Z</pubTime>
+        
+        <tag>面试题</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="面试题" url="blog.xfysj.cn/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>blog.xfysj.cn/2018/05/31/css/juzhong/</loc>
+    <lastmod>2018-05-31T12:29:24.914Z</lastmod>
+    <data>
+        <display>
+        <title>未知宽高如何 水平垂直居中</title>
         <pubTime>2018-05-31T12:07:46.172Z</pubTime>
         
         <tag>前端</tag>
@@ -42,21 +86,6 @@
              
               <breadCrumb title="项目管理" url="blog.xfysj.cn/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>blog.xfysj.cn/2018/05/31/http/http-status/</loc>
-    <lastmod>2018-05-31T07:38:09.226Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2018-05-31T07:38:09.226Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
